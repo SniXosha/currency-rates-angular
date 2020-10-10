@@ -7,7 +7,6 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  showTable = true;
   ratesData: any;
   currencies: string[] = ['USD', 'EUR'];
 
@@ -15,13 +14,9 @@ export class AppComponent implements OnInit {
     private http: HttpClient
   ) {}
 
-  switchView(): void {
-    this.showTable = !this.showTable;
-  }
-
   ngOnInit(): void {
     this.http
-      .get('http://localhost:8080/ratesForMonth')
+      .get('http://localhost:8080/rates?days=30')
       .subscribe(data => this.ratesData = data);
   }
 }

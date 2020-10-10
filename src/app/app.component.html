@@ -1,4 +1,8 @@
-<button class="switch-button" mat-raised-button (click)="switchView()"> Switch view </button>
-
-<app-rates-table *ngIf="showTable" [ratesData]="ratesData" [currencies]="currencies"></app-rates-table>
-<app-rates-chart *ngIf="!showTable" [ratesData]="ratesData" [currencies]="currencies"></app-rates-chart>
+<mat-tab-group animationDuration="0">
+  <mat-tab label="Table">
+    <app-rates-table [ratesData]="ratesData" [currencies]="currencies"></app-rates-table>
+  </mat-tab>
+  <mat-tab label="Chart">
+    <app-rates-chart [ratesData]="ratesData" [currencies]="currencies"></app-rates-chart>
+  </mat-tab>
+</mat-tab-group>

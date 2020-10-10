@@ -9,6 +9,7 @@ import {RatesTableComponent} from './rates-table/rates-table.component';
 import {MatButtonModule} from '@angular/material/button';
 import {RatesChartComponent} from './rates-chart/rates-chart.component';
 import {LineChartModule} from '@swimlane/ngx-charts';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {LineChartModule} from '@swimlane/ngx-charts';
     MatTableModule,
     HttpClientModule,
     MatButtonModule,
-    LineChartModule
+    LineChartModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
